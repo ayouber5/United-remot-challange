@@ -80,7 +80,7 @@ f(1);
 
 Pagination :
 
-![alt text](https://github.com/ayouber5/United-remot-challange/blob/master/screenshoot/pagination.png)
+(https://github.com/ayouber5/United-remot-challange/blob/master/screenshoot/pagination.png)
 
 # technology choice
 
