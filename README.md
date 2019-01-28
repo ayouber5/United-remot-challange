@@ -75,7 +75,7 @@ this module aims to explore github projects and display them in HTML and Jquery 
 f(1);
 ## Mockups
 ![alt text](https://github.com/ayouber5/United-remot-challange/blob/master/screenshoot/capture1.png)
-![alt text](https://github.com/ayouber5/United-remot-challange/blob/master/screenshoot/capture2.png)
+![alt text](https://github.com/ayouber5/United-remot-challange/blob/master/screenshoot/captue2.png)
 
 
 Pagination :
