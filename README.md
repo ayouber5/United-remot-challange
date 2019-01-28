@@ -1,7 +1,7 @@
 # United remot challange
 this module aims to explore github projects and display them in HTML and Jquery format with json By Hlila Ayoub (Software  engineer).
 
-# Get the JSON Data with function jquery
+## Get the JSON Data with function jquery
 
    function f(j) {
 
@@ -17,11 +17,11 @@ this module aims to explore github projects and display them in HTML and Jquery 
     	format: "json",
   }) 
   
-  #   Get and display the arraylist  
+  ##   Get and display the arraylist  
     .done(function( data ) {
       	$.each( data.items, function( i, item ) {
         
- #   Reload the css of rows
+ ##   Reload the css of rows
       
 			var lien_css = document.createElement('link');
 			lien_css.setAttribute("href","css/style.css");
@@ -30,18 +30,18 @@ this module aims to explore github projects and display them in HTML and Jquery 
 			document.getElementsByTagName("head").item(0).appendChild(lien_css);
             document.write('<div class="id-card-wrapper">');
 
-# display the avatar of the owner 
+## display the avatar of the owner 
             document.write(' <img style=""  src='+ item.owner.avatar_url + ' />');
            
 
-# display rows description, login of the owner and name 
+## display rows description, login of the owner and name 
 
 			document.write('<h1>'+ item.name + '</h1>');
             document.write('<p>'+ item.description +'</p>');
             document.write('<p>'+'stars : '+ item.stargazers_count + '&nbsp;&nbsp;&nbsp;&nbsp;'+'issues :' + item.open_issues_count  + '&nbsp;&nbsp;&nbsp;&nbsp;'+'submitted 30 days ago by : '+ item.owner.login +'</p>' );
 
 
-# Reload the css of pagination
+## Reload the css of pagination
 
 			var lien_css = document.createElement('link');
 			lien_css.setAttribute("href","css/stylee.css");
@@ -52,7 +52,7 @@ this module aims to explore github projects and display them in HTML and Jquery 
 
 		});
 
-# Display pagination
+## Display pagination
                         
 			document.write('<ul class="pagination modal-5">\n' +
 					'\t\t\t\t\t<li><a href="#" class="prev fa fa-arrow-left"> </a></li>\n' +
@@ -71,7 +71,7 @@ this module aims to explore github projects and display them in HTML and Jquery 
 
     });
 })();}
-# Run My function 
+## Run My function 
 f(1);
 # technology choice
 
