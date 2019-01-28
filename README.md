@@ -73,6 +73,13 @@ this module aims to explore github projects and display them in HTML and Jquery 
 })();}
 ## Run My function 
 f(1);
+## Mockups
+![alt text](https://raw.githubusercontent.com/hiddenfounders/frontend-coding-challenge/master/mockup.png)
+
+Pagination :
+
+![alt text](https://raw.githubusercontent.com/hiddenfounders/frontend-coding-challenge/master/row_explained.png)
+
 # technology choice
 
 I chose jquery because there is documentation on the internet, then I can program with any frent-end technology
