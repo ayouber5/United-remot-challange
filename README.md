@@ -74,11 +74,13 @@ this module aims to explore github projects and display them in HTML and Jquery 
 ## Run My function 
 f(1);
 ## Mockups
-![alt text](https://raw.githubusercontent.com/hiddenfounders/frontend-coding-challenge/master/mockup.png)
+![alt text](https://github.com/ayouber5/United-remot-challange/blob/master/screenshoot/capture1.png)
+![alt text](https://github.com/ayouber5/United-remot-challange/blob/master/screenshoot/capture2.png)
+
 
 Pagination :
 
-![alt text](https://raw.githubusercontent.com/hiddenfounders/frontend-coding-challenge/master/row_explained.png)
+![alt text](https://github.com/ayouber5/United-remot-challange/blob/master/screenshoot/pagination.png)
 
 # technology choice
 
