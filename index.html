@@ -1,0 +1,116 @@
+<!-- @Author : Hlila Ayoub (software engineer) -->
+<!DOCTYPE html>
+<html lang="en" >
+
+<html>
+<head>
+	<meta charset="UTF-8">
+
+	<title>Get the latest 30 posts in github</title>
+
+	<!-- Include css  -->
+
+	<link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+	<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/stylee.css">
+
+	<!-- Include jquery  -->
+
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+
+</head>
+<body >
+
+
+<script>
+
+	<!-- functon f to get Json data and display it  -->
+	var j=1;
+   function f(j) {
+
+
+
+	   <!-- Get the JSON Data -->
+
+	(function() {
+
+  	 GithubAPI = "https://api.github.com/search/repositories?q=created:>2017-10-22&sort=stars&order=desc&page="+j;
+  	$.getJSON( GithubAPI, {
+    	tags: "mount rainier",
+    	tagmode: "any",
+    	format: "json",
+  }) <!-- Get and display the arraylist   -->
+    .done(function( data ) {
+      	$.each( data.items, function( i, item ) {
+			<!-- reload the css of rows -->
+			var lien_css = document.createElement('link');
+			lien_css.setAttribute("href","css/style.css");
+			lien_css.setAttribute("rel","stylesheet");
+			lien_css.setAttribute("type","text/css");
+			document.getElementsByTagName("head").item(0).appendChild(lien_css);
+            document.write('<div class="id-card-wrapper">');
+
+            document.write('<div class="id-card">');
+            document.write(' <div class="profile-row">');
+            document.write('<div class="dp">');
+            document.write('<div class="dp-arc-outer">');
+            document.write('</div>');
+            document.write('<div class="dp-arc-inner">');
+            document.write('</div>');
+			<!-- display the avatar of the owner  -->
+            document.write(' <img style=""  src='+ item.owner.avatar_url + ' />');
+            document.write('</div>');
+            document.write('<div style="desc">');
+
+			<!-- display rows description, login of the owner and name -->
+
+			document.write('<h1>'+ item.name + '</h1>');
+            document.write('<p>'+ item.description +'</p>');
+            document.write('<p>'+'stars : '+ item.stargazers_count + '&nbsp;&nbsp;&nbsp;&nbsp;'+'issues :' + item.open_issues_count  + '&nbsp;&nbsp;&nbsp;&nbsp;'+'submitted 30 days ago by : '+ item.owner.login +'</p>' );
+
+
+			document.write('</div>');
+			document.write('</div>');
+			document.write('</div>');
+			document.write('</div>');
+
+			<!-- reload the css of pagination -->
+
+			var lien_css = document.createElement('link');
+			lien_css.setAttribute("href","css/stylee.css");
+			lien_css.setAttribute("rel","stylesheet");
+			lien_css.setAttribute("type","text/css");
+			document.getElementsByTagName("head").item(0).appendChild(lien_css);
+
+
+		});
+
+			<!-- Display pagination -->
+                        
+			document.write('<ul class="pagination modal-5">\n' +
+					'\t\t\t\t\t<li><a href="#" class="prev fa fa-arrow-left"> </a></li>\n' +
+					'\t\t\t<li> <a href="#"  onclick="f(1)">1</a></li>\n' +
+					'\t\t\t<li> <a href="#" onclick="f(2)" >2</a></li>\n' +
+					'\t\t\t<li> <a href="#" onclick="f(3)">3</a></li>\n' +
+					'\t\t\t<li> <a href="#" onclick="f(4">4</a></li>\n' +
+					'\t\t\t<li> <a href="#"  onclick="f(5)" >5</a></li>\n' +
+					'\t\t\t<li> <a href="#" onclick="f(6)">6</a></li>\n' +
+					'\t\t\t<li> <a href="#" onclick="f(7)">7</a></li>\n' +
+					'\t\t\t<li> <a href="#" onclick="f(8)">8</a></li>\n' +
+					'\t\t\t<li> <a href="#" onclick="f(9)">9</a></li>\n' +
+					'\t\t\t<li><a href="#" class="next fa fa-arrow-right"></a></li>\n' +
+					'\t\t\t</ul>');
+
+
+    });
+})();}
+	<!-- Run My function -->
+f(1);
+
+</script>
+
+
+</body>
+
+</html>
